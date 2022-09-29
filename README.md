@@ -4,7 +4,7 @@ This code is used to generate the command for model training automatically.
 See more details from the [official tutorial](https://github.com/Project-MONAI/tutorials/tree/main/auto3dseg).
 
 # Usage
-1. Set up the parameters in main.py to adapt to your dataset.
+1. Set up the parameters in [main.py](https://github.com/baiti01/Auto3DSeg-monai/blob/3719bd7d46c77f829de759c9c0f4c6dd6e9a4060/main.py#L30) to adapt to your dataset.
 2. Automatically analyze the dataset, generate the model(s), and create the command used for model training by running:
 ```console
 python main.py
