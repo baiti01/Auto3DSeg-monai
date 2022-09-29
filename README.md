@@ -10,3 +10,14 @@ This script is used to automatically generate the command for model training
 
 # LOGS
 - add a small segresnet to assets where the initial_channel is set to 16, the batch size is set as 1.
+
+# Usage
+1. Setup the parameters in main.py adapted to your own dataset.
+2. Automatically analyze the dataset, generate the model(s), and create the command used for model training by running:
+```console
+python main.py
+```
+3. Setup your cUDA device ID, and train the model by running (FOR EXAMPLE):
+```console
+bash segresnet_small_0.sh
+```
