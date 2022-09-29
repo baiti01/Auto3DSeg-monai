@@ -1,6 +1,7 @@
 # Auto3DSeg-monai
 This code is used to automatically generate the command for model training.
-See more details from the official [tutorial](https://github.com/Project-MONAI/tutorials/tree/main/auto3dseg)
+
+See more details from the official [tutorial](https://github.com/Project-MONAI/tutorials/tree/main/auto3dseg).
 
 # Made the following changes before using it
 - The default train_params is set as {}, instead of NONE. Otherwise the code will raise the error "undefined parameteres" at [here](https://github.com/Project-MONAI/MONAI/blob/52df2baf347809008dbf26dfa6a2f716eb12ae68/monai/apps/auto3dseg/bundle_gen.py#L158).
