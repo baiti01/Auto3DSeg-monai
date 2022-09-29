@@ -11,7 +11,7 @@ See more details from the official [tutorial](https://github.com/Project-MONAI/t
 - Adapt to Windows operation system [here](https://github.com/baiti01/Auto3DSeg-monai/blob/fa800c72296cb7e37a13758cdc2c74a9f1734988/assets/algorithm_templates/segresnet/scripts/train.py#L45)
 
 # LOGS
-- add a small segresnet to assets where the initial_channel is set to 16, the batch size is set as 1.
+- Add a small segresnet to assets where the initial_channel is set to 16, the batch size is set as 1.
 
 # Usage
 1. Setup the parameters in main.py adapted to your own dataset.
