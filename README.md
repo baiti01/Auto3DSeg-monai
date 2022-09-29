@@ -17,7 +17,7 @@ This script is used to automatically generate the command for model training
 ```console
 python main.py
 ```
-3. Setup your cUDA device ID, and train the model by running (FOR EXAMPLE):
+3. Setup your CUDA device ID, and train the model by running (FOR EXAMPLE):
 ```console
 bash segresnet_small_0.sh
 ```
