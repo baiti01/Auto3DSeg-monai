@@ -1,4 +1,4 @@
-# Auto3DSeg-monai
+# Introduction
 This code is used to automatically generate the command for model training.
 
 See more details from the official [tutorial](https://github.com/Project-MONAI/tutorials/tree/main/auto3dseg).
