@@ -24,7 +24,7 @@ from monai.bundle.config_parser import ConfigParser
 
 if __name__ == '__main__':
     ### setup the experiement parameters
-    is_data_analysis = False
+    is_data_analysis = True
     need_customized_train_params = False
 
     data_root = r'./data'
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     dataset_name = 'OAR'
 
     num_fold = 5
-    model_name = ['segresnet'] # choose from ["segresnet", "segresnet2d", "dints", "swinunetr"]
+    model_name = ['segresnet_small'] # choose from ["segresnet_small", "segresnet", "segresnet2d", "dints", "swinunetr"]
     template_path = r'assets/algorithm_templates'
     task = 'segmentation'
     modality = 'CT'
@@ -80,6 +80,8 @@ if __name__ == '__main__':
     if not os.path.exists(os.path.join(result_dir, 'algorithm_templates')):
         shutil.copytree(template_path, os.path.join(result_dir, 'algorithm_templates'))
     default_algos = {
+        "segresnet_small": dict(_target_="segresnet_small.scripts.algo.SegresnetAlgo",
+                          template_path=os.path.join(result_dir, "algorithm_templates", "segresnet_small")),
         "segresnet": dict(_target_="segresnet.scripts.algo.SegresnetAlgo",
                           template_path=os.path.join(result_dir, "algorithm_templates", "segresnet")),
         "segresnet2d": dict(_target_="segresnet2d.scripts.algo.Segresnet2dAlgo",
