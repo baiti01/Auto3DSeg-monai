@@ -7,3 +7,6 @@ This script is used to automatically generate the command for model training
 - Set Resample=False [here](https://github.com/baiti01/Auto3DSeg-monai/blob/fa800c72296cb7e37a13758cdc2c74a9f1734988/assets/algorithm_templates/segresnet/scripts/algo.py#L188) for segresnet to avoid the out-of-memory issue. (This is NOT a bug. After modification, the default resolution is not (1, 1, 1) anymore.)
 - Add extra code [here](https://github.com/baiti01/Auto3DSeg-monai/blob/fa800c72296cb7e37a13758cdc2c74a9f1734988/assets/algorithm_templates/segresnet/scripts/algo.py#L300) to convert all the list-based transform to REAL transform objects
 - Adapt to Windows operation system [here](https://github.com/baiti01/Auto3DSeg-monai/blob/fa800c72296cb7e37a13758cdc2c74a9f1734988/assets/algorithm_templates/segresnet/scripts/train.py#L45)
+
+# LOGS
+- add a small segresnet to assets where the initial_channel is set to 16, the batch size is set as 1.
