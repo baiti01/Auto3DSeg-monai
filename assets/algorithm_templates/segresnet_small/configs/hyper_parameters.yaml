@@ -10,7 +10,7 @@ determ: false
 fold: 0
 input_channels: null
 learning_rate: 2.0e-4
-num_images_per_batch: 1
+num_images_per_batch: 2
 num_epochs: 1250
 num_epochs_per_validation: 1
 num_patches_per_image: 1

@@ -277,6 +277,12 @@ def run(config_file: Optional[Union[str, Sequence[str]]] = None, **override):
 
             lr_scheduler.step()
 
+        del batch_data
+        del inputs
+        del labels
+        del outputs
+        del loss
+
         if torch.cuda.device_count() > 1:
             dist.barrier()
             dist.all_reduce(loss_torch, op=torch.distributed.ReduceOp.SUM)
@@ -314,7 +320,10 @@ def run(config_file: Optional[Union[str, Sequence[str]]] = None, **override):
                             model,
                             mode="gaussian",
                             overlap=overlap_ratio,
+                            device='cpu'
                         )
+
+                    del val_images
 
                     val_outputs = post_pred(val_outputs[0, ...])
                     val_outputs = val_outputs[None, ...]
@@ -322,8 +331,11 @@ def run(config_file: Optional[Union[str, Sequence[str]]] = None, **override):
                     if softmax:
                         val_labels = post_label(val_labels[0, ...])
                         val_labels = val_labels[None, ...]
-
+                    
                     value = compute_meandice(y_pred=val_outputs, y=val_labels, include_background=not softmax)
+
+                    del val_outputs
+                    del val_labels
 
                     print(_index + 1, "/", len(val_loader), value)
 

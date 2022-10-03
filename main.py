@@ -24,16 +24,16 @@ from monai.bundle.config_parser import ConfigParser
 
 if __name__ == '__main__':
     ### setup the experiement parameters
-    is_data_analysis = True
+    is_data_analysis = False 
     need_customized_train_params = False
 
     data_root = r'./data'
-    datalist_file = r'./dataset.json'
+    datalist_file = r'./data/task1_AMOS.json'
     result_dir = r'result'
-    dataset_name = 'OAR'
+    dataset_name = 'MONAI'
 
     num_fold = 5
-    model_name = ['segresnet_small'] # choose from ["segresnet_small", "segresnet", "segresnet2d", "dints", "swinunetr"]
+    model_name = ['segresnet'] # choose from ["segresnet_small", "segresnet", "segresnet2d", "dints", "swinunetr"]
     template_path = r'assets/algorithm_templates'
     task = 'segmentation'
     modality = 'CT'
